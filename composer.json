@@ -8,9 +8,6 @@
             "email": "segy@riesenia.com"
         }
     ],
-    "require": {
-        "friendsofphp/php-cs-fixer": "2.7-dev"
-    },
     "autoload": {
         "psr-4": {
             "Rshop\\CS\\Config\\": "src/"
