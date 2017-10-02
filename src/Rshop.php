@@ -51,7 +51,11 @@ class Rshop extends Config
                 'sortAlgorithm' => 'alpha'
             ],
             'phpdoc_add_missing_param_annotation' => [
-                'only_untyped' => true
+                'only_untyped' => false
+            ],
+            'phpdoc_order' => true,
+            'phpdoc_types_order' => [
+                'null_adjustment' => 'always_last'
             ],
             'protected_to_private' => false,
             'single_blank_line_before_namespace' => false,
