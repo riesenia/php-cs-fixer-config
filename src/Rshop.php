@@ -5,10 +5,11 @@ use PhpCsFixer\Config;
 
 class Rshop extends Config
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     private $header;
+
+    /** @var bool */
+    private $strict = false;
 
     /**
      * @param string $header
@@ -20,6 +21,16 @@ class Rshop extends Config
         parent::__construct('rshop');
 
         $this->setRiskyAllowed(true);
+    }
+
+    /**
+     * @return $this
+     */
+    public function setStrict()
+    {
+        $this->strict = true;
+
+        return $this;
     }
 
     /**
@@ -35,11 +46,11 @@ class Rshop extends Config
             'concat_space' => [
                 'spacing' => 'one'
             ],
+            'declare_strict_types' => $this->strict,
             'hash_to_slash_comment' => false,
             'is_null' => [
                 'use_yoda_style' => false
             ],
-            'no_blank_lines_before_namespace' => true,
             'no_multiline_whitespace_before_semicolons' => true,
             'no_null_property_initialization' => true,
             'no_php4_constructor' => true,
@@ -58,7 +69,6 @@ class Rshop extends Config
                 'null_adjustment' => 'always_last'
             ],
             'protected_to_private' => false,
-            'single_blank_line_before_namespace' => false,
             'ternary_to_null_coalescing' => true,
             'trailing_comma_in_multiline_array' => false,
             'yoda_style' => [
@@ -68,9 +78,17 @@ class Rshop extends Config
             ]
         ];
 
+        if (!$this->strict) {
+            $rules['no_blank_lines_before_namespace'] = true;
+            $rules['single_blank_line_before_namespace'] = false;
+        }
+
         if ($this->header !== null) {
             $rules['header_comment'] = [
+                'commentType' => 'PHPDoc',
                 'header' => $this->header,
+                'location' => 'after_open',
+                'separate' => 'bottom'
             ];
         }
 
