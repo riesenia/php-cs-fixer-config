@@ -69,6 +69,7 @@ class Rshop extends Config
                 'null_adjustment' => 'always_last'
             ],
             'protected_to_private' => false,
+            'single_line_comment_style' => false,
             'ternary_to_null_coalescing' => true,
             'trailing_comma_in_multiline_array' => false,
             'yoda_style' => [
