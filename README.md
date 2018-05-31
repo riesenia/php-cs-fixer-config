@@ -19,3 +19,5 @@ $config->getFinder()->in(__DIR__);
 
 return $config;
 ```
+
+To modify configuration file use `setRule` method. To declare strict types use `setStrict` method.
