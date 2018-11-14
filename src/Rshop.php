@@ -14,16 +14,26 @@ class Rshop extends Config
     /** @var array */
     private $rules = [
         '@Symfony' => true,
+        'array_indentation' => true,
         'array_syntax' => [
             'syntax' => 'short'
+        ],
+        'blank_line_before_statement' => [
+            'statements' => ['break', 'case', 'continue', 'declare', 'default', 'do', 'for', 'foreach', 'if', 'include', 'include_once', 'require', 'require_once', 'return', 'switch', 'throw', 'try', 'while', 'yield']
         ],
         'concat_space' => [
             'spacing' => 'one'
         ],
+        'combine_consecutive_issets' => true,
+        'combine_consecutive_unsets' => true,
+        'compact_nullable_typehint' => true,
+        'explicit_indirect_variable' => true,
         'hash_to_slash_comment' => false,
         'is_null' => [
             'use_yoda_style' => false
         ],
+        'logical_operators' => true,
+        'method_chaining_indentation' => true,
         'no_multiline_whitespace_before_semicolons' => true,
         'no_null_property_initialization' => true,
         'no_php4_constructor' => true,
