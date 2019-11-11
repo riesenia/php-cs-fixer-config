@@ -37,6 +37,7 @@ class Rshop extends Config
         'no_multiline_whitespace_before_semicolons' => true,
         'no_null_property_initialization' => true,
         'no_php4_constructor' => true,
+        'no_superfluous_phpdoc_tags' => false,
         'no_useless_return' => true,
         'ordered_class_elements' => [
             'order' => ['use_trait', 'constant_public', 'constant_protected', 'constant_private', 'property_public', 'property_protected', 'property_private', 'construct', 'destruct', 'method_public', 'method_protected', 'method_private', 'magic', 'phpunit']
