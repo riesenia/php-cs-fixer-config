@@ -27,7 +27,7 @@ class Rshop extends Config
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
         'compact_nullable_typehint' => true,
-        'echo_tag_syntax' => ['format' => 'short', 'shorten_simple_statements_only' => true],
+        'echo_tag_syntax' => false,
         'explicit_indirect_variable' => true,
         'hash_to_slash_comment' => false,
         'is_null' => [
