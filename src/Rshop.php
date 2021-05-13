@@ -56,7 +56,7 @@ class Rshop extends Config
         'protected_to_private' => false,
         'single_line_comment_style' => false,
         'ternary_to_null_coalescing' => true,
-        'trailing_comma_in_multiline_array' => false,
+        'trailing_comma_in_multiline' => false,
         'yoda_style' => [
             'equal' => false,
             'identical' => false,
