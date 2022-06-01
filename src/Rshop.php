@@ -25,9 +25,7 @@ class Rshop extends Config
         'compact_nullable_typehint' => true,
         'echo_tag_syntax' => false,
         'explicit_indirect_variable' => true,
-        'is_null' => [
-            'use_yoda_style' => false
-        ],
+        'is_null' => false,
         'logical_operators' => true,
         'method_chaining_indentation' => true,
         'native_function_invocation' => ['include' => ['@all']],
