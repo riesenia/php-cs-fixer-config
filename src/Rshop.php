@@ -36,7 +36,7 @@ class Rshop extends Config
             'order' => ['use_trait', 'case', 'constant_public', 'constant_protected', 'constant_private', 'property_public', 'property_protected', 'property_private', 'construct', 'destruct', 'method_public', 'method_protected', 'method_private', 'magic', 'phpunit']
         ],
         'ordered_imports' => [
-            'sortAlgorithm' => 'alpha'
+            'sort_algorithm' => 'alpha'
         ],
         'phpdoc_order' => true,
         'phpdoc_types_order' => [
