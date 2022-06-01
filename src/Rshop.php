@@ -76,7 +76,7 @@ class Rshop extends Config
         return $this;
     }
 
-    public function getRules()
+    public function getRules(): array
     {
         $this->rules['declare_strict_types'] = $this->strict;
 
