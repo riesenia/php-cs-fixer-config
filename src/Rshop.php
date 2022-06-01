@@ -85,7 +85,7 @@ class Rshop extends Config
 
         if ($this->header !== null) {
             $this->rules['header_comment'] = [
-                'commentType' => 'PHPDoc',
+                'comment_type' => 'PHPDoc',
                 'header' => $this->header,
                 'location' => 'after_open',
                 'separate' => 'none'
