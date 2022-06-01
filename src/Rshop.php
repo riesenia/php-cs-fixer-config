@@ -5,16 +5,12 @@ use PhpCsFixer\Config;
 
 class Rshop extends Config
 {
-    /** @var string */
     private $header;
 
-    /** @var bool */
     private $strict = false;
 
-    /** @var array */
     private $rules = [
-        '@Symfony' => true,
-        'array_indentation' => true,
+        '@PhpCsFixer' => true,
         'array_syntax' => [
             'syntax' => 'short'
         ],
@@ -29,25 +25,18 @@ class Rshop extends Config
         'compact_nullable_typehint' => true,
         'echo_tag_syntax' => false,
         'explicit_indirect_variable' => true,
-        'hash_to_slash_comment' => false,
         'is_null' => [
             'use_yoda_style' => false
         ],
         'logical_operators' => true,
         'method_chaining_indentation' => true,
-        'no_multiline_whitespace_before_semicolons' => true,
-        'no_null_property_initialization' => true,
-        'no_php4_constructor' => true,
-        'no_superfluous_phpdoc_tags' => false,
+        'native_function_invocation' => ['include' => ['@all']],
         'no_useless_return' => true,
         'ordered_class_elements' => [
-            'order' => ['use_trait', 'constant_public', 'constant_protected', 'constant_private', 'property_public', 'property_protected', 'property_private', 'construct', 'destruct', 'method_public', 'method_protected', 'method_private', 'magic', 'phpunit']
+            'order' => ['use_trait', 'case', 'constant_public', 'constant_protected', 'constant_private', 'property_public', 'property_protected', 'property_private', 'construct', 'destruct', 'method_public', 'method_protected', 'method_private', 'magic', 'phpunit']
         ],
         'ordered_imports' => [
             'sortAlgorithm' => 'alpha'
-        ],
-        'phpdoc_add_missing_param_annotation' => [
-            'only_untyped' => false
         ],
         'phpdoc_order' => true,
         'phpdoc_types_order' => [
@@ -64,10 +53,7 @@ class Rshop extends Config
         ]
     ];
 
-    /**
-     * @param string $header
-     */
-    public function __construct($header = null)
+    public function __construct(string $header = null)
     {
         $this->header = $header;
 
@@ -76,12 +62,6 @@ class Rshop extends Config
         $this->setRiskyAllowed(true);
     }
 
-    /**
-     * @param string $rule
-     * @param mixed  $value
-     *
-     * @return $this
-     */
     public function setRule(string $rule, $value)
     {
         $this->rules[$rule] = $value;
@@ -89,9 +69,6 @@ class Rshop extends Config
         return $this;
     }
 
-    /**
-     * @return $this
-     */
     public function setStrict()
     {
         $this->strict = true;
@@ -99,9 +76,6 @@ class Rshop extends Config
         return $this;
     }
 
-    /**
-     * @return array
-     */
     public function getRules()
     {
         $this->rules['declare_strict_types'] = $this->strict;
@@ -116,7 +90,7 @@ class Rshop extends Config
                 'commentType' => 'PHPDoc',
                 'header' => $this->header,
                 'location' => 'after_open',
-                'separate' => 'bottom'
+                'separate' => 'none'
             ];
         }
 

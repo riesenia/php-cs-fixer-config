@@ -8,7 +8,7 @@ Install the latest version using `composer require --dev rshop/php-cs-fixer-conf
 
 ## Usage
 
-Create a configuration file *.php_cs* in the root of your project:
+Create a configuration file *.php-cs-fixer.dist.php* in the root of your project:
 
 ```php
 <?php
