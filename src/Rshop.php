@@ -28,7 +28,12 @@ class Rshop extends Config
         'is_null' => false,
         'logical_operators' => true,
         'method_chaining_indentation' => true,
-        'native_function_invocation' => ['include' => ['@all']],
+        'multiline_whitespace_before_semicolons' => [
+            'strategy' => 'no_multi_line'
+        ],
+        'native_function_invocation' => [
+            'include' => ['@all']
+        ],
         'no_useless_return' => true,
         'ordered_class_elements' => [
             'order' => ['use_trait', 'case', 'constant_public', 'constant_protected', 'constant_private', 'property_public', 'property_protected', 'property_private', 'construct', 'destruct', 'method_public', 'method_protected', 'method_private', 'magic', 'phpunit']
@@ -40,6 +45,8 @@ class Rshop extends Config
         'phpdoc_types_order' => [
             'null_adjustment' => 'always_last'
         ],
+        'php_unit_test_class_requires_covers' => false,
+        'php_unit_internal_class' => false,
         'protected_to_private' => false,
         'single_line_comment_style' => false,
         'ternary_to_null_coalescing' => true,
