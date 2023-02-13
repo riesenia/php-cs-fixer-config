@@ -32,7 +32,7 @@ class Rshop extends Config
             'strategy' => 'no_multi_line'
         ],
         'native_function_invocation' => [
-            'include' => ['@all']
+            'include' => ['@internal']
         ],
         'no_useless_return' => true,
         'ordered_class_elements' => [
