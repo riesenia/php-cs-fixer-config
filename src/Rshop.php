@@ -43,7 +43,8 @@ class Rshop extends Config
         ],
         'phpdoc_order' => true,
         'phpdoc_types_order' => [
-            'null_adjustment' => 'always_last'
+            'null_adjustment' => 'always_last',
+            'sort_algorithm' => 'none'
         ],
         'php_unit_test_class_requires_covers' => false,
         'php_unit_internal_class' => false,
