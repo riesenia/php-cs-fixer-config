@@ -20,6 +20,7 @@ class Rshop extends Config
         'concat_space' => [
             'spacing' => 'one'
         ],
+        'fully_qualified_strict_types' => false,
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
         'compact_nullable_typehint' => true,
