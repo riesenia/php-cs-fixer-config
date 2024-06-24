@@ -25,7 +25,7 @@ class Rshop extends Config
         'fully_qualified_strict_types' => false,
         'combine_consecutive_issets' => true,
         'combine_consecutive_unsets' => true,
-        'compact_nullable_typehint' => true,
+        'compact_nullable_type_declaration' => true,
         'echo_tag_syntax' => false,
         'explicit_indirect_variable' => true,
         'is_null' => false,
