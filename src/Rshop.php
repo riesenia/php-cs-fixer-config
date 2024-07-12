@@ -86,11 +86,6 @@ class Rshop extends Config
     {
         $this->rules['declare_strict_types'] = $this->strict;
 
-        if (!$this->strict) {
-            $this->rules['no_blank_lines_before_namespace'] = true;
-            $this->rules['single_blank_line_before_namespace'] = false;
-        }
-
         if ($this->header !== null) {
             $this->rules['header_comment'] = [
                 'comment_type' => 'PHPDoc',
