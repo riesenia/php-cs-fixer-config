@@ -20,7 +20,7 @@ class Rshop extends Config
         'concat_space' => [
             'spacing' => 'one'
         ],
-        'blank_line_after_opening_tag' => true,
+        'blank_line_after_opening_tag' => false,
         'single_line_empty_body'=> false,
         'fully_qualified_strict_types' => false,
         'combine_consecutive_issets' => true,
