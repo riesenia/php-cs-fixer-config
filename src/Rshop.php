@@ -63,7 +63,7 @@ class Rshop extends Config
         ]
     ];
 
-    public function __construct(string $header = null)
+    public function __construct(?string $header = null)
     {
         $this->header = $header;
 
