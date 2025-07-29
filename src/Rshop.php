@@ -2,6 +2,7 @@
 namespace Rshop\CS\Config;
 
 use PhpCsFixer\Config;
+use Rshop\CS\Config\Fixer\StripArrayTrailingCommaFixer;
 
 class Rshop extends Config
 {
@@ -54,6 +55,7 @@ class Rshop extends Config
         'php_unit_internal_class' => false,
         'protected_to_private' => false,
         'single_line_comment_style' => false,
+        'strip_array_trailing_comma' => true,
         'ternary_to_null_coalescing' => true,
         'trailing_comma_in_multiline' => false,
         'yoda_style' => [
@@ -70,6 +72,9 @@ class Rshop extends Config
         parent::__construct('rshop');
 
         $this->setRiskyAllowed(true);
+        $this->registerCustomFixers([
+            new StripArrayTrailingCommaFixer()
+        ]);
     }
 
     public function setRule(string $rule, $value)
