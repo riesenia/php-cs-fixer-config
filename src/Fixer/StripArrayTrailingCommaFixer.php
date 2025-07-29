@@ -10,6 +10,11 @@ use PhpCsFixer\Tokenizer\Tokens;
 
 final class StripArrayTrailingCommaFixer extends AbstractFixer
 {
+    public function getName(): string
+    {
+        return 'Rshop/strip_array_trailing_comma';
+    }
+
     public function getDefinition(): FixerDefinition
     {
         return new FixerDefinition(

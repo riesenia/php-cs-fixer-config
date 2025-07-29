@@ -55,14 +55,14 @@ class Rshop extends Config
         'php_unit_internal_class' => false,
         'protected_to_private' => false,
         'single_line_comment_style' => false,
-        'strip_array_trailing_comma' => true,
         'ternary_to_null_coalescing' => true,
         'trailing_comma_in_multiline' => false,
         'yoda_style' => [
             'equal' => false,
             'identical' => false,
             'less_and_greater' => false
-        ]
+        ],
+        'Rshop/strip_array_trailing_comma' => true
     ];
 
     public function __construct(?string $header = null)
