@@ -54,6 +54,7 @@ class Rshop extends Config
         'php_unit_test_class_requires_covers' => false,
         'php_unit_internal_class' => false,
         'protected_to_private' => false,
+        'return_assignment' => false,
         'single_line_comment_style' => false,
         'ternary_to_null_coalescing' => true,
         'trailing_comma_in_multiline' => false,
